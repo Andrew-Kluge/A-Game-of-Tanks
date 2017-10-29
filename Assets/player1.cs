@@ -47,11 +47,12 @@ namespace Assets.Code
             //Forwards & Backwards Action
             Thrust(Input.GetAxis("Vertical1"));
 
+            //// TODO - Impliment firing ////
             //Firing action
-            /*if (Input.GetAxis(_fireaxis) > 0)
+            if (Input.GetAxis(_fireaxis) > 0)
             {
-                Fire();
-            }*/
+                //Fire();
+            }
         }
 
         private void Turn(float direction)

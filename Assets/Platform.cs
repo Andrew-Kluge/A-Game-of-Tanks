@@ -53,14 +53,6 @@ namespace Assets.Code
             return GetPlatform() == PlatformType.Windows ? "FireWindows" : "FireMac"; // OSX/Linux bind right trigger the same way
         }
         
-        /// <summary>
-        /// Returns the name of the platform appropriate input axis for saving.
-        /// Start/Back are mapped to Save/Load. OSX uses a different button number than Windows/Linux.
-        /// </summary>
-        /// <returns>Name of the "save" axis</returns>
-        public static string GetSaveAxis () {
-            return GetPlatform() == PlatformType.Mac ? "SaveMac" : "SaveWindows"; 
-        }
     }
 
 }
