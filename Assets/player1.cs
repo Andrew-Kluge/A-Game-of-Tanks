@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Structure;
 using UnityEngine;
+using Assets.Code;
 
-
-namespace Assets.Code
+namespace Assets
 {
     public class player1 : MonoBehaviour
     {
@@ -12,7 +13,7 @@ namespace Assets.Code
         private static string _fireaxis;
 
         private Rigidbody2D _rb;
-        //private Gun _gun;
+        private Gun _gun;
 
         // ReSharper disable once UnusedMember.Global
         internal void Start()
@@ -51,8 +52,9 @@ namespace Assets.Code
             //Firing action
             if (Input.GetAxis(_fireaxis) > 0)
             {
-                //Fire();
+                Fire();
             }
+
         }
 
         private void Turn(float direction)
@@ -73,9 +75,9 @@ namespace Assets.Code
             _rb.AddRelativeForce(Vector2.up * intensity);
         }
 
-        /*private void Fire () {
+        private void Fire () {
             _gun.Fire();
-        }*/
+        }
         /*
         public class PlayerGameData : GameData
         {

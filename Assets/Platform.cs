@@ -50,9 +50,14 @@ namespace Assets.Code
         /// </summary>
         /// <returns>Name of the "fire" axis</returns>
         public static string GetFireAxis() {
-            return GetPlatform() == PlatformType.Windows ? "FireWindows" : "FireMac"; // OSX/Linux bind right trigger the same way
+            return GetPlatform() == PlatformType.Windows ? "Fire1Win" : "Fire1Mac"; // OSX/Linux bind right trigger the same way
         }
-        
+
+        public static string GetFireAxis2()
+        {
+            return GetPlatform() == PlatformType.Windows ? "Fire2Win" : "Fire2Mac"; // OSX/Linux bind right trigger the same way
+        }
+
     }
 
 }
